@@ -1,0 +1,26 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.sobre_podcast {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+  @media (min-width: 768px) {
+    .sobre_podcast {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5rem;
+    }
+  }
+  
+.contenido_podcast {
+    margin-top: 5rem;
+  }
+.contenido_podcast h2 {
+    margin-bottom: 2rem;
+  }
+.contenido_podcast .texto_podcast {
+    color: #843479;
+    font-weight: 700;
+  }

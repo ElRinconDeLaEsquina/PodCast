@@ -1,0 +1,29 @@
+@forward 'base';
+@forward 'layout';
+
+//para poder usar mi hoja de variables aqui debemos importarla
+// @import ...antes se usaba esta sintaxis, hoy en dia ya no se usa 
+//para importar usaremos 
+// @use 'variables';
+// @use 'variables' as *; //para no usar el metodo variables
+// @use 'base/variables' as v;
+// @use 'base/normalize'; //se usa use para evitar codigos duplicados con import
+// @forward 'base/normalize'; //esta forma no usa el namespace
+
+
+//forma de agregar fuentes
+
+// body{
+//     // forma de usar una variable con archivo de variables
+//     // font-family: variables.$fuente_principal; //se le llama namespace
+//     font-family: v.$fuente_principal;
+//     // font-family: "Montserrat", sans-serif;
+//     font-optical-sizing: auto;
+//     font-style: normal;
+//     color: v.$color_fondo_principal;
+
+// }
+
+//ahora crearemos un archivo de variables, sass tiene la cualidad de que puedes crear varios documentos de sass para un mismo proyecto y sass lo compila en una misma hoja de estilos para ello debes crear otr archivo QUE DEBE INICIAR SIEMPRE CON GUIN BAJO asi indicamos que es parte de mi archivo de sass global
+
+//ahora habilitaremos el modo watch a todas las hojas de estilo
