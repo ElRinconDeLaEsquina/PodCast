@@ -1,0 +1,38 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.nosotros {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+  @media (min-width: 768px) {
+    .nosotros {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        
+      }
+}
+
+.personal{
+    border-radius: 30px;
+    
+   
+}
+  
+.info-personal{
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #FFFFFF;
+    
+}
+  
+.img-nosotros{
+    aspect-ratio: 2 /2;
+    object-fit: cover;
+  
+}

@@ -1,0 +1,54 @@
+@use 'variables' as v; //importacion de variables 
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-padding-top: 0rem;
+} //reset de html, es decir arreglos dimensionales para el uso del rem
+*, 
+*:before,
+*:after {
+    box-sizing: inherit;
+} //este es otro tipo de reset que solia usar para normalizar un poco el trabajo con las 'cajas'
+body {
+    font-family: v.$fuente_principal; //fuente (la que descargamos)
+    font-optical-sizing: auto; //optimizacion de la vista para distintos tamanos de fuentes
+    font-style: normal;
+    color: v.$negro; //color de fuente
+    font-size: 2rem;//tamano de fuente
+} //estos son algunos estilos para el body
+p {
+    color: v.$negro;
+    line-height: 1.5;
+} //estilos para el parrafo
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+} //cree una clase contenedor, el tamano maximo es de 95% con relacion a la pantalla
+a {
+    text-decoration: none;
+}//quitar la linea de los vinculos
+h1, h2, h3 {
+    margin: 0 0 5rem 0;
+    font-weight: 900;
+}//estilo general de heading, tamano de linea y espaciado hacia abajo
+h1 {
+    font-size: 4rem;
+} //tamano de cada heading individual
+h2 {
+    font-size: 4.6rem;
+}
+h3 {
+    font-size: 6rem;
+    text-align: center;
+}
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+}//con esto hacemos que las imagenes tomen todo el espacio del contenedor
+body > section {
+    padding: 10rem 0;
+}//esto quiere decir que el primer section hijo de un body tendra un padding de 10 rem arriba y abajo
