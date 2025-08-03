@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para lees</title>
+</head>
+<body>
+    <style>
+        body{
+            object-fit: cover;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTeQ4lh1g2PsDuI6ZW8h55CS6Rfjq5O_o90rfWx5nVkHzf0O1PmCSP0K45_CanlUvQSQo&usqp=CAU);
+        }
+
+        .contenido{
+            background-color: yellow;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .name{
+            background-color: blueviolet;
+            text-align: center;
+        }
+
+        .repeticion{
+            text-align: center;
+            background-color: aqua;
+        }
+
+        #result{
+            text-align: center;
+            background-color: brown;
+        }
+
+        .imagen{
+            text-align: center;
+        }
+    </style>
+
+    <div class="contenido">
+        <h1>holaaaa</h1>
+        <button onclick="saludar ()">presioname</button>
+    </div>
+
+    <br><br>
+
+    <div class="name">
+        <label for="nombre" >cual es tu nombre?</label>
+        <input type="text" id="nombre" placeholder="pedrito">
+        
+        <button onclick="validar()"> confirmar</button>
+
+        <p id="resultado"></p>
+
+    </div>
+    
+    <div class="repeticion">
+        <button onclick="repeticion()">picaleeeee</button>
+        <div id="result"></div>
+    </div>
+
+    <br>
+
+    <div class="imagen">
+        <button onclick="gato()">ver imagen</button>
+        <div id="contenedorImagen">
+        </div>
+    </div>
+    
+
+    <script>
+        function saludar () {
+            alert ("Bañate pinche cochina madafaker");
+        }
+
+        function validar () {
+            const nombre = document.getElementById("nombre").value;
+            const resultado = document.getElementById("resultado");
+
+            if (nombre == "Emiliano") {
+                resultado.innerHTML = "Que nombre tan pinche hermoso";
+            } else{
+                resultado.innerHTML = "Pinche nombre todo ogete cambiatelo nmms";
+            }
+        }
+        
+        function repeticion(){
+            const contenedor = document.getElementById("result");
+            const frase = "ya fue mucho hate, tqm <3";
+            for (let i = 0; i <10; i ++){
+                const parrafo = document.createElement("p");
+                parrafo.textContent = frase;
+                contenedor.appendChild(parrafo);
+            }
+        }
+
+        function gato() {
+            const contenedor = document.getElementById("contenedorImagen");
+            
+            // Crea una nueva etiqueta de imagen <img> en memoria
+            const imagen = document.createElement('img');
+            
+            // Asigna la ruta de la imagen. La ruta que tenías estaba incompleta.
+            imagen.src = "gato_grosero.jpg"; 
+            
+            // Asigna un texto alternativo por accesibilidad
+            imagen.alt = 'Imagen de un gato grosero';
+            
+            // Limpia el contenedor antes de añadir la nueva imagen,
+            // para que no aparezcan varias al presionar el botón varias veces
+            contenedor.innerHTML = '';
+
+            // Agrega la imagen al contenedor en el HTML
+            contenedor.appendChild(imagen);
+        }
+    </script>
+</body>
+</html>
